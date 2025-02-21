@@ -1,0 +1,87 @@
+/* login.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url('./Capture.PNG');
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Améliore l’ombre */
+}
+
+
+
+.login-box {
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.login-form {
+  margin-top: 150px;
+  width: 50%;
+  padding: 20px;
+}
+.form{
+  border-radius: 50px;
+}
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg');
+  background-size: cover; /* Ensure the background covers the entire .image div */
+  background-position: right ;
+  width: 1200px; /* Increased width */
+  height: 640px; /* Increased height */
+  position: relative; /* Ensure positioning context for absolute positioning */
+  border-bottom-right-radius:50px;
+  border-top-right-radius:50px;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+
+h4 {
+  text-align: center;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #1976d2;
+  color: white;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+a {
+  text-decoration: none;
+  color: #1976d2;
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

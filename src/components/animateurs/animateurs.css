@@ -1,0 +1,32 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;  /* Permet aux cartes d'aller à la ligne si l'écran est petit */
+    justify-content: center;  /* Centre les cartes horizontalement */
+    gap: 20px;  /* Espace entre les cartes */
+    padding: 20px;
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: white;
+    border: 2px solid #5e5e5e;
+    color: #5e5e5e;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: linear-gradient(to right, #D4A9FF, #80D1FF);
+    color: white;
+}

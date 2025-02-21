@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+
+body {
+    font-family: 'Lemonada', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #D4A9FF, #80D1FF);
+}
+
+.box {
+    height: 95vh;
+    width: 1283px;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    margin: 20px;
+    height: 85vh;
+    width: 313px;
+    background: linear-gradient(to right, #D4A9FF, #80D1FF);
+    padding-top: 20px;
+    border-radius: 35px;
+}
+
+.sidebar h2 {
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    padding-left: 20px;
+    transition: 0.3s;
+}
+
+.content {
+    padding: 20px;
+    width: calc(100% - 313px);
+    background-color: #ffffff;
+    overflow-y: auto;
+    border-radius: 0 35px 35px 0;
+}
+
+.dashboard {
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.autre {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.logout {
+    padding-top: 10px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.textitem {
+    font-weight: 900 !important;
+  }
+  
