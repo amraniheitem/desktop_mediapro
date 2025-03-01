@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
 
-body {
-    font-family: 'Lemonada', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #D4A9FF, #80D1FF);
-}
-
-.box {
-    height: 95vh;
-    width: 1283px;
-    display: flex;
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: #ffffff;
-}
-
 .sidebar {
     margin: 20px;
     height: 85vh;
@@ -87,13 +67,13 @@ body {
     font-size: 18px;
     font-weight: bold;
     background-color: #fff;
-    color: #FFA634;
+    color: linear-gradient(to right, #D4A9FF, #80D1FF);
     transition: all 0.3s ease-in-out;
     position: relative; /* Garde sa place */
 }
 
 .logout:hover {
-    background-color: #FFA634;
+    background-color: linear-gradient(to right, #D4A9FF, #80D1FF);
     color: #fff;
 }
 

@@ -1,18 +1,19 @@
 import React from "react";
-import "./card.css"; // Assure-toi d'ajouter un fichier CSS pour styliser les cartes
+import "./card.css";
 
 const CardAnimateur = ({ name, wilaya, description, image, nbreve, nbrlike, ranking }) => {
     return (
         <div className="card">
             <div className="card-content">
-                <div className="info">
-                    <img src={"./profile.jpg"} alt="Profile" className="profile-img" />
-                    <div className="text">
-                        <h3 className="card-title">{name}</h3>
-                        <h4 className="card-wilaya">{wilaya}</h4>
-                    </div>
+
+            <div className="slach">
+            <img src={"./profile.jpg"} alt="Profile" className="profile-img" />
+                <div className="text">
+                    <h3 className="card-title">{name}</h3>
+                    <h4 className="card-wilaya">{wilaya}</h4>
                 </div>
 
+            </div>
                 <div className="stat">
                     <div className="stat2">
                         <div className="event">

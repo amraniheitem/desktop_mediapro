@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     Box, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Button, TextField
 } from "@mui/material";
 import { FaTachometerAlt, FaUserPlus, FaUsers, FaTags, FaShoppingCart, FaBell, FaSignOutAlt } from "react-icons/fa";
-import "./animateurs.css";
-import CardAnimateur from "./card";
-
-   
+import CardVoix from "./card";
+import "./voix.css";
 
 const menuItems = [
     { text: "Tableau de bord", icon: <FaTachometerAlt />, link: "/dashboard" },
@@ -18,29 +16,25 @@ const menuItems = [
     { text: "Notifications", icon: <FaBell />, link: "#" },
 ];
 
-const animateursList = [
-    { id: 1, name: "Amrani Heitem", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "https://via.placeholder.com/150", nbreve: 30, nbrlike: 250, ranking: 3.4 },
-    { id: 2, name: "Sofia Lamari", wilaya: "SBA", description: "Animatrice d'événements pour enfants", image: "https://via.placeholder.com/150", nbreve: 30, nbrlike: 250, ranking: 3.4 },
-    { id: 3, name: "Karim Belkacem", wilaya: "Alger", description: "Animateur de spectacles pour adultes", image: "https://via.placeholder.com/150", nbreve: 20, nbrlike: 180, ranking: 4.2 },
-    { id: 4, name: "Leila Bensalem", wilaya: "Oran", description: "Présentatrice de gala et soirées", image: "https://via.placeholder.com/150", nbreve: 15, nbrlike: 300, ranking: 4.5 },
+const voiceList = [
+    { id: 1, name: "Ahmed Ben Salah", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg", langue: "Anglais", nbrlike: 250, ranking: 3.4 },
+    { id: 1, name: "AMrani Ben Salah", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg", langue: "Anglais", nbrlike: 250, ranking: 3.4 },
+    { id: 1, name: "Ahmed Ben Salah", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg", langue: "Anglais", nbrlike: 250, ranking: 3.4 },
+    { id: 1, name: "Ahmed Ben Salah", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg", langue: "Anglais", nbrlike: 250, ranking: 3.4 },
+    { id: 1, name: "Ahmed Ben Salah", wilaya: "SBA", description: "Spécialiste en animation musicale", image: "./journalism-concept-live-news-mic-with-camera-3d-renderind-background.jpg", langue: "Anglais", nbrlike: 250, ranking: 3.4 },
 ];
 
-const Animateurs = () => {
-    const [active, setActive] = useState("Animateurs");
+const Voix = () => {
+    const [active, setActive] = useState("Voix-off");
     const [search, setSearch] = useState("");
-    const [filteredAnimateurs, setFilteredAnimateurs] = useState(animateursList);
 
-    // Mettre à jour la liste des animateurs en fonction de la recherche
-    useEffect(() => {
-        const result = animateursList.filter((animateur) =>
-            animateur.name.toLowerCase().includes(search.toLowerCase())
-        );
-        setFilteredAnimateurs(result);
-    }, [search]); // Exécuté à chaque changement de `search`
+    // Filtrer les voix-off en fonction du texte entré
+    const filteredVoix = voiceList.filter((voix) =>
+        voix.name.toLowerCase().includes(search.toLowerCase())
+    );
 
     return (
         <Box className="box">
-            {/* Sidebar */}
             <Box className="sidebar">
                 <Typography variant="h5" align="center" sx={{ color: "#fff", mb: 2 }}>
                     Logo
@@ -90,44 +84,31 @@ const Animateurs = () => {
                 </Button>
             </Box>
 
-            {/* Contenu principal */}
             <div className="content">
-                <h2 style={{ fontWeight: "900" }}>Animateurs</h2>
-                <p>On a déjà +150 animateurs dans MediaPro dans +4 types d’événements</p>
+                <h2 style={{ fontWeight: "900" }}>Voix-Off</h2>
+                <p>On a déjà +8 Voix-off dans MediaPro dans +3 langues</p>
 
-                {/* Barre de recherche */}
                 <TextField
                     variant="outlined"
-                    placeholder="Rechercher un animateur..."
+                    placeholder="Rechercher une voix-off..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    sx={{ mb: 2, maxWidth: "400px", width: "100%" }}
+                    sx={{ mb: 2, maxWidth: "400px" }}
                 />
 
-                {/* Filtres */}
                 <div className="filter-container">
                     <button className="filter-btn">Classement</button>
                     <button className="filter-btn">Wilaya</button>
-                    <button className="filter-btn">Nbr des événements</button>
+                    <button className="filter-btn">Langue</button>
                 </div>
 
-                {/* Affichage des cartes animateurs */}
                 <div className="cards-container">
-                    {filteredAnimateurs.length > 0 ? (
-                        filteredAnimateurs.map((animateur) => (
-                            <CardAnimateur
-                                key={animateur.id}
-                                name={animateur.name}
-                                description={animateur.description}
-                                image={animateur.image}
-                                nbreve={animateur.nbreve}
-                                nbrlike={animateur.nbrlike}
-                                ranking={animateur.ranking}
-                                wilaya={animateur.wilaya}
-                            />
+                    {filteredVoix.length > 0 ? (
+                        filteredVoix.map((voix) => (
+                            <CardVoix key={voix.id} {...voix} />
                         ))
                     ) : (
-                        <p>Aucun animateur trouvé</p>
+                        <p>Aucune Voix-off trouvée</p>
                     )}
                 </div>
             </div>
@@ -135,4 +116,4 @@ const Animateurs = () => {
     );
 };
 
-export default Animateurs;
+export default Voix;

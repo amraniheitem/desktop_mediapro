@@ -6,11 +6,12 @@ import { FaTachometerAlt, FaUserPlus, FaUsers, FaTags, FaShoppingCart, FaBell, F
 import "./ajoutez-animateur.css";
 
 const menuItems = [
-    { text: "Tableau de bord", icon: <FaTachometerAlt />, link: "../dashboard/dashboard.jsx" },
+    { text: "Tableau de bord", icon: <FaTachometerAlt />, link: "/dashboard" },
     { text: "Ajouter animateur", icon: <FaUserPlus />, link: "#" },
-    { text: "Animateurs", icon: <FaUsers />, link: "./animateurs.html" },
+    { text: "Animateurs", icon: <FaUsers />, link: "/animateurs" },
+    { text: "Voix-off", icon: <FaUsers />, link: "/voix-off" },
     { text: "Offres et promos", icon: <FaTags />, link: "#" },
-    { text: "Commande", icon: <FaShoppingCart />, link: "./commands.html" },
+    { text: "Commande", icon: <FaShoppingCart />, link: "/commands" },
     { text: "Notifications", icon: <FaBell />, link: "#" },
 ];
 

@@ -14,7 +14,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
+.card:hover {
+    transform: scale(1.05);
+}
 .card-content {
     display: flex;
     flex-direction: column;
@@ -25,11 +27,7 @@
 }
 
 
-.info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+
 
 .profile-img {
     width: 80px;
@@ -89,4 +87,9 @@
     font-size: 14px;
     font-weight: bold;
     color: #D4A9FF;
+}
+.slach {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }

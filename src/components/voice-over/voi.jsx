@@ -4,12 +4,12 @@ import {
 } from "@mui/material";
 import { FaTachometerAlt, FaUserPlus, FaUsers, FaTags, FaShoppingCart, FaBell, FaSignOutAlt, FaStar } from "react-icons/fa";
 import SearchBar from "react-material-ui-searchbar"; // Assure-toi que cette librairie est bien installée
-import "./animateur.css";
+import "./voi.css";
 
-// Composant Animateur
-function Animateur() {
+
+function Voi() {
     const [active, setActive] = useState(""); // Définition de l'état pour la sélection du menu
-    const [filteredAnimateurs, setFilteredAnimateurs] = useState([ // Exemple de données
+    const [filteredvoix, setFilteredvoix] = useState([ // Exemple de données
         {
             image: "https://via.placeholder.com/120",
             name: "John Doe",
@@ -19,7 +19,8 @@ function Animateur() {
             email: "john@example.com",
             phone: "0123456789",
             adresse: "Alger Centre",
-            niveau: "Expert"
+            niveau: "Expert",
+            link: "www.youtube.com/link"
         }
     ]);
 
@@ -88,15 +89,15 @@ function Animateur() {
 
             {/* Contenu principal */}
             <Box className="content">
-                {filteredAnimateurs.map((animateur, index) => (
+                {filteredvoix.map((voix, index) => (
                     <><Box key={index} className="profile-card">
                         {/* Avatar */}
-                        <Avatar src={animateur.image} alt="Profile" className="profile-img" sx={{ width: 120, height: 120 }} />
+                        <Avatar src={voix.image} alt="Profile" className="profile-img" sx={{ width: 120, height: 120 }} />
 
                         {/* Nom et Wilaya */}
                         <div className="text-data">
-                            <Typography variant="h5" sx={{ fontWeight: "bold" }}>{animateur.name}</Typography>
-                            <Typography variant="body1" sx={{ color: "gray" }}>{animateur.wilaya}</Typography>
+                            <Typography variant="h5" sx={{ fontWeight: "bold" }}>{voix.name}</Typography>
+                            <Typography variant="body1" sx={{ color: "gray" }}>{voix.wilaya}</Typography>
                         </div>
 
                         {/* Étoiles de notation */}
@@ -104,12 +105,12 @@ function Animateur() {
                             <Box sx={{ background: "linear-gradient(to right, #FFA634, #edd656)", p: 1, borderRadius: "50%" }}>
                                 <FaStar color="white" />
                             </Box>
-                            <Typography variant="h5">{animateur.ranking}</Typography>
+                            <Typography variant="h5">{voix.ranking}</Typography>
                         </Box>
 
                         {/* Description */}
                         <Typography variant="body2" sx={{ mt: 2, textAlign: "center", maxWidth: "80%" }}>
-                            {animateur.description}
+                            {voix.description}
                         </Typography>
 
                         {/* Boutons Modifier/Supprimer */}
@@ -120,28 +121,34 @@ function Animateur() {
 
 
                     </Box>
-                    
-                    <Box className="info">
+
+                        <Box className="info">
                             <Typography variant="h4" className="informations">Informations</Typography>
 
                             <Box className="infos-container">
                                 <Typography variant="body1"><strong>Email:</strong></Typography>
-                                <Typography variant="body1">{animateur.email}</Typography>
+                                <Typography variant="body1">{voix.email}</Typography>
                             </Box>
 
                             <Box className="infos-container">
                                 <Typography variant="body1"><strong>Phone:</strong></Typography>
-                                <Typography variant="body1">{animateur.phone}</Typography>
+                                <Typography variant="body1">{voix.phone}</Typography>
                             </Box>
 
                             <Box className="infos-container">
                                 <Typography variant="body1"><strong>Wilaya:</strong></Typography>
-                                <Typography variant="body1">{animateur.wilaya}</Typography>
+                                <Typography variant="body1">{voix.wilaya}</Typography>
                             </Box>
 
                             <Box className="infos-container">
                                 <Typography variant="body1"><strong>Adresse:</strong></Typography>
-                                <Typography variant="body1">{animateur.adresse}</Typography>
+                                <Typography variant="body1">{voix.adresse}</Typography>
+                            </Box>
+                            <Box className="infos-container">
+                                <Typography variant="body1"><strong>Lien de la video:</strong></Typography>
+                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                    La vidéo présentative 
+                                </a>
                             </Box>
                         </Box></>
 
@@ -151,4 +158,4 @@ function Animateur() {
     );
 }
 
-export default Animateur;
+export default Voi;
